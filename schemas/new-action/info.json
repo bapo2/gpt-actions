@@ -1,0 +1,1 @@
+{"title": "New action", "shortdesc": "A short description of the new action.", "format": "JSON", "auth": "No authentication", "desc": "This is a longer description of the action and will be placed in the dropdown entry.\r\n\r\nThis can be multiline!", "author": "bapo2"}
