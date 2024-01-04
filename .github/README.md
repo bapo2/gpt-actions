@@ -52,30 +52,6 @@
 <thead><tr><th width="9999px"><h2 align="center">📁 Action Directory</h2></th></tr></thead>
 <tbody>
 <!-- START_SCHEMA_DIRECTORY -->
-<!-- START_ACTION: "Example Action" -->
-<tr><td><details>
-<summary><b>Example Action</b> - A brief summary of the main purpose of this action.</summary>
-<p><ul>
-<li><b>Author:</b> <a href="#">Link to their github here</a></li>
-<li><b>Schema format:</b> JSON</li>
-<li><b>Authentication type:</b> None</li>
-</ul></p>
-<p><b>Description:</b><br>
-<i>Example description goes here, lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</i></p>
-<p><b>Import URL:</b><br>
-
-```
-https://raw.githubusercontent.com/bapo2/gpt-actions/main/schemas/example.json
-```
-<p><b>Schema:</b></p>
-
-```json
-{
-    "schema": "goes here"
-}
-```
-</details></td></tr>
-<!-- END_ACTION: "Example Action" -->
 <!-- END_SCHEMA_DIRECTORY -->
 </tbody>
 </table>
