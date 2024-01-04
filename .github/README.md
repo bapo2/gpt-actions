@@ -52,30 +52,64 @@
 <thead><tr><th width="9999px"><h2 align="center">📁 Action Directory</h2></th></tr></thead>
 <tbody>
 <!-- START_SCHEMA_DIRECTORY -->
-<!-- START_ACTION: "Example Action" -->
-<tr><td><details>
-<summary><b>Example Action</b> - A brief summary of the main purpose of this action.</summary>
-<p><ul>
-<li><b>Author:</b> <a href="#">Link to their github here</a></li>
+
+<!-- START_SCHEMA: "New action" -->
+<tr><td><details><summary><b>New action</b> - A short description of the new action.</summary><p><ul>
+<li><b>Author:</b> <a href="https://github.com/bapo2">bapo2</a></li>
 <li><b>Schema format:</b> JSON</li>
-<li><b>Authentication type:</b> None</li>
-</ul></p>
+<li><b>Authentication type:</b> No authentication</li></ul></p>
 <p><b>Description:</b><br>
-<i>Example description goes here, lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</i></p>
+<i>This is a longer description of the action and will be placed in the dropdown entry.
+
+This can be multiline!</i></p>
 <p><b>Import URL:</b><br>
 
 ```
-https://raw.githubusercontent.com/bapo2/gpt-actions/main/schemas/example.json
+https://raw.githubusercontent.com/bapo2/gpt-actions/main/schemas/new-action/schema.json
 ```
-<p><b>Schema:</b></p>
+</p><p><b>Schema:</b>
 
 ```json
 {
-    "schema": "goes here"
+    "openapi": "3.1.0",
+    "info": {
+        "title": "Get weather data",
+        "description": "Retrieves current weather data for a location.",
+        "version": "v1.0.0"
+    },
+    "servers": [
+        {
+            "url": "https://weather.example.com"
+        }
+    ],
+    "paths": {
+        "/location": {
+            "get": {
+                "description": "Get temperature for a specific location",
+                "operationId": "GetCurrentWeather",
+                "parameters": [
+                    {
+                        "name": "location",
+                        "in": "query",
+                        "description": "The city and state to retrieve the weather for",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "deprecated": false
+            }
+        }
+    },
+    "components": {
+        "schemas": {}
+    }
 }
 ```
-</details></td></tr>
-<!-- END_ACTION: "Example Action" -->
+</p></details></td></tr>
+<!-- END_SCHEMA: "New action" -->
+
 <!-- END_SCHEMA_DIRECTORY -->
 </tbody>
 </table>
