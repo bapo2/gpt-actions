@@ -50,7 +50,7 @@
 <!-- Action Directory -->
 <table>
 <thead><tr><th width="9999px"><h2 align="center">📁 Action Directory</h2></th></tr></thead>
-<tbody>
+<tbody><tr></tr>
 <!-- START_SCHEMA_DIRECTORY -->
 
 <!-- START_SCHEMA: "New action" -->

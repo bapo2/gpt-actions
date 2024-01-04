@@ -1,23 +1,23 @@
-name: "Validate Action Submission"
+name: "Validate a newly submitted schema issue"
 description: "Validates action submissions via the issue template."
 author: "bapo2"
+
 inputs:
-  issue_number:
-    description: "The issue number of the issue to validate."
-    required: true
   issue_body:
-    description: "The full text of the issue."
+    description: "The full-text body of the issue."
     required: true
   issue_labels:
     description: "The labels currently applied to the issue."
     required: true
+
 outputs:
   issue_body:
-    description: "A complete issue, reformatted appropriately, meant to replace the original issue."
+    description: "The new body of the issue to replace the old one."
   issue_labels:
     description: "The labels to apply to the issue (comma-separated)."
   issue_comment:
-    description: "A comment to post on the issue regarding the validation."
+    description: "A comment to post on the issue regarding the validation results."
+
 runs:
   using: "docker"
   image: "Dockerfile"

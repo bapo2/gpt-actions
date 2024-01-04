@@ -6,13 +6,8 @@ WORKDIR /src
 # Install git
 RUN apt-get update && apt-get install -y git
 
-# Make the script executable
-RUN chmod +x /src/update-schemas.py
-
-# Install dependencies
-RUN pip install GitPython
-RUN pip install requests
-RUN pip install PyGithub
+# Install dependencies and make the script executable
+RUN chmod +x /src/main.py && pip install GitPython requests PyGithub
 
 # Create a new stage for setting up the environment
 FROM base as final
@@ -24,4 +19,4 @@ ARG GITHUB_TOKEN
 ENV GITHUB_TOKEN=$GITHUB_TOKEN
 
 # Run the script
-CMD [ "python", "/src/update-schemas.py" ]
+CMD [ "python", "/src/main.py" ]
