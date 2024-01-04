@@ -1,0 +1,16 @@
+name: Add approved schemas to repo
+description: "Update the schema directory in the repo's README with the latest approved schemas."
+author: "bapo2"
+inputs:
+  repo_url:
+    description: "The URL of this repo."
+    required: true
+  issue_list:
+    description: "A comma-separated list of issue numbers to update."
+    required: true
+  GITHUB_TOKEN:
+    description: "The GitHub token for authentication."
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
