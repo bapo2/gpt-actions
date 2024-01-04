@@ -1,0 +1,59 @@
+name: "Validate a newly submitted schema"
+
+on:
+  issues:
+    types: [opened, edited]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: "Get the issue's labels"
+        id: get_issue_labels
+        uses: actions/github-script@v5
+        with:
+          script: |
+            const issue = await github.rest.issues.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number
+            });
+            return issue.data.labels.map(label => label.name).join(',');
+      
+      - name: "Run the 'validate-new-schema' action-script"
+        uses: ./.github/actions/validate-new-schema
+        id: validate_issue
+        with:
+          issue_body: ${{ github.event.issue.body }}
+          issue_labels: ${{ steps.get_issue_labels.outputs.result }}
+
+      - name: "Update the issue with the new body and labels"
+        uses: actions/github-script@v5
+        id: update_issue
+        with:
+          script: |
+            const body = Buffer.from('${{ steps.validate_issue.outputs.issue_body }}', 'base64').toString('utf-8');
+            const labels = Buffer.from('${{ steps.validate_issue.outputs.issue_labels }}', 'base64').toString('utf-8').split(',');
+            github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: body,
+              labels: labels
+            });
+      
+      - name: "Add a comment to the issue describing the validation results"
+        if: ${{ steps.validate_issue.outputs.issue_comment }}
+        uses: actions/github-script@v5
+        id: add_comment
+        with:
+          script: |
+            const comment = Buffer.from('${{ steps.validate_issue.outputs.issue_comment }}', 'base64').toString('utf-8');
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: comment
+            });

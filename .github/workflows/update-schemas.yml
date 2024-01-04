@@ -1,14 +1,17 @@
-name: Update Repo With New Schemas
+name: "Update Repo With New Schemas"
+
 on:
   workflow_dispatch
+
 jobs:
   update-schemas:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Get issues with 'schema-approved' label
-        id: get_issues
+
+      - name: "Get issues with 'schema-approved' label"
         uses: actions/github-script@v5
+        id: get_approved_issues
         with:
           script: |
             const issues = await github.rest.issues.listForRepo({
@@ -18,11 +21,12 @@ jobs:
               state: 'open'
             });
             return issues.data.map(issue => issue.number).join(',');
-      - name: Run the update-schemas action script
+        
+      - name: "Run the 'update-schemas' action script"
         uses: ./.github/actions/update-schemas
+        id: update_schemas
         with:
-          repo_url: ${{ github.repository }}
-          issue_list: ${{ steps.get_issues.outputs.result }}
+          repo_path: ${{ github.repository }}
+          issue_list: ${{ steps.get_approved_issues.outputs.result }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        id: update_schemas
