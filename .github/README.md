@@ -52,14 +52,12 @@
 <thead><tr><th width="9999px"><h2 align="center">📁 Action Directory</h2></th></tr></thead>
 <tbody>
 <!-- START_SCHEMA_DIRECTORY -->
-
 <!-- START_SCHEMA: "New action" -->
 <tr><td><details><summary><b>New action</b> - A short description of the new action.</summary><p><ul>
 <li><b>Author:</b> <a href="https://github.com/bapo2">bapo2</a></li>
 <li><b>Schema format:</b> JSON</li>
 <li><b>Authentication type:</b> No authentication</li></ul></p>
-<p><b>Description:</b><br>
-<i>This is a longer description of the action and will be placed in the dropdown entry.
+<p><b>Description:</b><br><i>This is a longer description of the action and will be placed in the dropdown entry.
 
 This can be multiline!</i></p>
 <p><b>Import URL:</b><br>
@@ -109,15 +107,13 @@ https://raw.githubusercontent.com/bapo2/gpt-actions/main/schemas/new-action/sche
 ```
 </p></details></td></tr>
 <!-- END_SCHEMA: "New action" -->
-<tr></tr>
 
 <!-- START_SCHEMA: "New schema yaml" -->
 <tr><td><details><summary><b>New schema yaml</b> - This is a new schea in yaml format</summary><p><ul>
 <li><b>Author:</b> <a href="https://github.com/bapo2">bapo2</a></li>
 <li><b>Schema format:</b> YAML</li>
 <li><b>Authentication type:</b> API Key [Basic]</li></ul></p>
-<p><b>Description:</b><br>
-<i>Here is another description.
+<p><b>Description:</b><br><i>Here is another description.
 
 And it's multiline too!
 
@@ -249,6 +245,63 @@ components:
 </p></details></td></tr>
 <!-- END_SCHEMA: "New schema yaml" -->
 
+<!-- START_SCHEMA: "test title" -->
+<tr><td><details><summary><b>test title</b> - the short description goes here</summary><p><ul>
+<li><b>Author:</b> <a href="https://github.com/bapo2">bapo2</a></li>
+<li><b>Schema format:</b> JSON</li>
+<li><b>Authentication type:</b> API Key [Bearer]</li></ul></p>
+<p><b>Description:</b><br><i>multiline
+
+description
+
+test</i></p>
+<p><b>Import URL:</b><br>
+
+```
+https://raw.githubusercontent.com/bapo2/gpt-actions/main/schemas/test-title/schema.json
+```
+</p><p><b>Schema:</b>
+
+```json
+{
+    "openapi": "3.1.0",
+    "info": {
+        "title": "Get weather data",
+        "description": "Retrieves current weather data for a location.",
+        "version": "v1.0.0"
+    },
+    "servers": [
+        {
+            "url": "https://weather.example.com"
+        }
+    ],
+    "paths": {
+        "/location": {
+            "get": {
+                "description": "Get temperature for a specific location",
+                "operationId": "GetCurrentWeather",
+                "parameters": [
+                    {
+                        "name": "location",
+                        "in": "query",
+                        "description": "The city and state to retrieve the weather for",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "deprecated": false
+            }
+        }
+    },
+    "components": {
+        "schemas": {}
+    }
+}
+```
+</p></details></td></tr>
+<!-- END_SCHEMA: "test title" -->
 <!-- END_SCHEMA_DIRECTORY -->
 </tbody>
 </table>
