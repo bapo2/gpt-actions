@@ -64,9 +64,9 @@ def run():
             
     # Get the needed parameters from the issue text using regex
     try:
-        body_pattern = r"### 📂 Name\s*\n*(.*?)\n*\s*### 📜 Format\s*\n*(.*?)\n*\s*### 📋 Schema\s*\n*(.*?)\n*\s*### 🔑 Authentication\s*\n*(.*?)\n*\s*### 📝 Description"
+        body_pattern = r"### 📂 Name\s*\n*(.*?)\n*\s*### 📰 Short Description\s*\n*(.*?)\n*\s*### 📜 Format\s*\n*(.*?)\n*\s*### 📋 Schema\s*\n*(.*?)\n*\s*### 🔑 Authentication\s*\n*(.*?)\n*\s*### 📝 Description\s*\n*(.*?)\n*\s*"
         matches = re.findall(body_pattern, issue_body, re.DOTALL)
-        title, format, schema, auth = matches[0][0], matches[0][1], matches[0][2], matches[0][3]
+        title, format, schema, auth = matches[0][0], matches[0][2], matches[0][3], matches[0][4]
     except:
         print("❌ Issue text is invalid, validation failed, running failure procedure...")
         fail("schema-invalid-issue", "Issue text is invalid, meaning that it probably doesn't match the issue template.")
