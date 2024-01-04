@@ -1,0 +1,10 @@
+{
+    "title": "test title",
+    "shortdesc": "the short description goes here",
+    "format": "JSON",
+    "schema": "{\n    \"openapi\": \"3.1.0\",\n    \"info\": {\n        \"title\": \"Get weather data\",\n        \"description\": \"Retrieves current weather data for a location.\",\n        \"version\": \"v1.0.0\"\n    },\n    \"servers\": [\n        {\n            \"url\": \"https://weather.example.com\"\n        }\n    ],\n    \"paths\": {\n        \"/location\": {\n            \"get\": {\n                \"description\": \"Get temperature for a specific location\",\n                \"operationId\": \"GetCurrentWeather\",\n                \"parameters\": [\n                    {\n                        \"name\": \"location\",\n                        \"in\": \"query\",\n                        \"description\": \"The city and state to retrieve the weather for\",\n                        \"required\": true,\n                        \"schema\": {\n                            \"type\": \"string\"\n                        }\n                    }\n                ],\n                \"deprecated\": false\n            }\n        }\n    },\n    \"components\": {\n        \"schemas\": {}\n    }\n}",
+    "auth": "API Key [Bearer]",
+    "desc": "multiline\n\ndescription\n\ntest",
+    "author": "bapo2",
+    "folder_title": "test-title"
+}

@@ -15,7 +15,7 @@
 <!-- Badges -->
 <h4 align="center">
     <a href="https://github.com/bapo2/gpt-actions/issues/new?assignees=&labels=new-schema&projects=&template=new_action_template.yml&title=%5BNew+GPT+Action%5D%3A+">
-        <img alt="Actions contributed" src="https://img.shields.io/badge/2%20actions%20contributed-ef571d?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIzNnB4IiBoZWlnaHQ9IjM2cHgiIHN0cm9rZS13aWR0aD0iMiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGNvbG9yPSIjZmZmZmZmIj48cGF0aCBkPSJNNiAxMkgxMk0xOCAxMkgxMk0xMiAxMlY2TTEyIDEyVjE4IiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L3BhdGg%2BPC9zdmc%2B">
+        <img alt="Actions contributed" src="https://img.shields.io/badge/1%20actions%20contributed-ef571d?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIzNnB4IiBoZWlnaHQ9IjM2cHgiIHN0cm9rZS13aWR0aD0iMiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGNvbG9yPSIjZmZmZmZmIj48cGF0aCBkPSJNNiAxMkgxMk0xOCAxMkgxMk0xMiAxMlY2TTEyIDEyVjE4IiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L3BhdGg%2BPC9zdmc%2B">
     </a>
     <a href="https://github.com/bapo2/gpt-actions/issues?q=is%3Aissue+is%3Aopen+label%3Aschema-valid+">
         <img alt="Schemas awaiting approval" src="https://img.shields.io/github/issues/bapo2/gpt-actions/schema-valid?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIzNnB4IiBoZWlnaHQ9IjM2cHgiIHN0cm9rZS13aWR0aD0iMiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGNvbG9yPSIjZmZmZmZmIj48cGF0aCBkPSJNMTMuNSA2TDEwIDE4LjUiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjwvcGF0aD48cGF0aCBkPSJNNi41IDguNUwzIDEyTDYuNSAxNS41IiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L3BhdGg%2BPHBhdGggZD0iTTE3LjUgOC41TDIxIDEyTDE3LjUgMTUuNSIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI%2BPC9wYXRoPjwvc3ZnPg%3D%3D&label=schemas%20awaiting%20approval&color=21bf1b">
@@ -52,24 +52,20 @@
 <thead><tr><th width="9999px"><h2 align="center">📁 Action Directory</h2></th></tr></thead>
 <tbody>
 <!-- START_SCHEMA_DIRECTORY -->
-
-<!-- START_SCHEMA: "New action" -->
-<tr><td><details><summary><b>New action</b> - A short description of the new action.</summary><p><ul>
+<!-- START_SCHEMA: "test title" -->
+<tr><td><details><summary><b>test title</b> - the short description goes here</summary><p><ul>
 <li><b>Author:</b> <a href="https://github.com/bapo2">bapo2</a></li>
 <li><b>Schema format:</b> JSON</li>
-<li><b>Authentication type:</b> No authentication</li></ul></p>
-<p><b>Description:</b><br>
-<i>This is a longer description of the action and will be placed in the dropdown entry.
+<li><b>Authentication type:</b> API Key [Bearer]</li></ul></p>
+<p><b>Description:</b><br><i>multiline
 
-This can be multiline!</i></p>
-<p><b>Import URL:</b><br>
+description
 
+test</i></p>
+<p><b>Import URL:</b><br>```json
+https://raw.githubusercontent.com/bapo2/gpt-actions/main/schemas/test-title/schema.json
 ```
-https://raw.githubusercontent.com/bapo2/gpt-actions/main/schemas/new-action/schema.json
-```
-</p><p><b>Schema:</b>
-
-```json
+</p><p><b>Schema:</b>```json
 {
     "openapi": "3.1.0",
     "info": {
@@ -106,148 +102,8 @@ https://raw.githubusercontent.com/bapo2/gpt-actions/main/schemas/new-action/sche
         "schemas": {}
     }
 }
-```
-</p></details></td></tr>
-<!-- END_SCHEMA: "New action" -->
-<tr></tr>
-
-<!-- START_SCHEMA: "New schema yaml" -->
-<tr><td><details><summary><b>New schema yaml</b> - This is a new schea in yaml format</summary><p><ul>
-<li><b>Author:</b> <a href="https://github.com/bapo2">bapo2</a></li>
-<li><b>Schema format:</b> YAML</li>
-<li><b>Authentication type:</b> API Key [Basic]</li></ul></p>
-<p><b>Description:</b><br>
-<i>Here is another description.
-
-And it's multiline too!
-
-Words!</i></p>
-<p><b>Import URL:</b><br>
-
-```
-https://raw.githubusercontent.com/bapo2/gpt-actions/main/schemas/new-schema-yaml/schema.yaml
-```
-</p><p><b>Schema:</b>
-
-```yaml
-# Taken from https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/petstore.yaml
-
-openapi: "3.0.0"
-info:
-  version: 1.0.0
-  title: Swagger Petstore
-  license:
-    name: MIT
-servers:
-  - url: https://petstore.swagger.io/v1
-paths:
-  /pets:
-    get:
-      summary: List all pets
-      operationId: listPets
-      tags:
-        - pets
-      parameters:
-        - name: limit
-          in: query
-          description: How many items to return at one time (max 100)
-          required: false
-          schema:
-            type: integer
-            maximum: 100
-            format: int32
-      responses:
-        '200':
-          description: A paged array of pets
-          headers:
-            x-next:
-              description: A link to the next page of responses
-              schema:
-                type: string
-          content:
-            application/json:    
-              schema:
-                $ref: "#/components/schemas/Pets"
-        default:
-          description: unexpected error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Error"
-    post:
-      summary: Create a pet
-      operationId: createPets
-      tags:
-        - pets
-      responses:
-        '201':
-          description: Null response
-        default:
-          description: unexpected error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Error"
-  /pets/{petId}:
-    get:
-      summary: Info for a specific pet
-      operationId: showPetById
-      tags:
-        - pets
-      parameters:
-        - name: petId
-          in: path
-          required: true
-          description: The id of the pet to retrieve
-          schema:
-            type: string
-      responses:
-        '200':
-          description: Expected response to a valid request
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Pet"
-        default:
-          description: unexpected error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Error"
-components:
-  schemas:
-    Pet:
-      type: object
-      required:
-        - id
-        - name
-      properties:
-        id:
-          type: integer
-          format: int64
-        name:
-          type: string
-        tag:
-          type: string
-    Pets:
-      type: array
-      maxItems: 100
-      items:
-        $ref: "#/components/schemas/Pet"
-    Error:
-      type: object
-      required:
-        - code
-        - message
-      properties:
-        code:
-          type: integer
-          format: int32
-        message:
-          type: string
-```
-</p></details></td></tr>
-<!-- END_SCHEMA: "New schema yaml" -->
+```</p></details></td></tr>
+<!-- END_SCHEMA: "test title" -->
 
 <!-- END_SCHEMA_DIRECTORY -->
 </tbody>
