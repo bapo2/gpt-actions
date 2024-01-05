@@ -1,0 +1,80 @@
+{
+    "info": {
+        "title": "ArXiv Search",
+        "description": "A GET-request based search operation for searching through arXiv.",
+        "version": "v1.0.0"
+    },
+    "servers": [
+        {
+            "url": "https://export.arxiv.org"
+        }
+    ],
+    "paths": {
+        "/api/query": {
+            "get": {
+                "description": "Searches through arXiv for the given query.",
+                "operationId": "searchArxiv",
+                "parameters": [
+                    {
+                        "name": "search_query",
+                        "in": "query",
+                        "description": "The query to search for.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "start",
+                        "in": "query",
+                        "description": "The index of the first result to return.",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "max_results",
+                        "in": "query",
+                        "description": "The maximum number of results to return. Defaults to 10.",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "sortBy",
+                        "in": "query",
+                        "description": "The field to sort by.",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "relevance",
+                                "lastUpdatedDate",
+                                "submittedDate"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "sortOrder",
+                        "in": "query",
+                        "description": "The order to sort by.",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "ascending",
+                                "descending"
+                            ]
+                        }
+                    }
+                ],
+                "deprecated": false
+            }
+        }
+    },
+    "components": {
+        "schemas": {}
+    }
+}

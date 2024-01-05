@@ -1,0 +1,120 @@
+{
+    "info": {
+        "title": "Semantic Scholar Search",
+        "description": "A GET-request based search operation for papers on Semantic Scholar, which uses a vector space model to find relevant papers based on a query (it can be very helpful for natural language searches).",
+        "version": "v1.0.0"
+    },
+    "servers": [
+        {
+            "url": "https://api.semanticscholar.org"
+        }
+    ],
+    "paths": {
+        "/graph/v1/paper/search": {
+            "get": {
+                "description": "Relevancy-based search for papers on Semantic Scholar.",
+                "operationId": "searchSemanticScholar",
+                "parameters": [
+                    {
+                        "name": "query",
+                        "in": "query",
+                        "description": "The search query itself, this can be any natural language query.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "limit",
+                        "in": "query",
+                        "description": "The maximum number of papers to return. Defaults to 10, maximum is 100.",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "fields",
+                        "in": "query",
+                        "description": "The fields to return in the response. Use the pre-specified value for this (don't change it).",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "enum": ["url,abstract,publicationTypes,tldr,openAccessPdf"]
+                        }
+                    },
+                    {
+                        "name": "fieldsOfStudy",
+                        "in": "query",
+                        "description": "The fields of study to filter the results by. These are comma-separated values, e.g. \"Computer Science,Medicine\".",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "Computer Science",
+                                "Medicine",
+                                "Chemistry",
+                                "Biology",
+                                "Materials Science",
+                                "Physics",
+                                "Geology",
+                                "Psychology",
+                                "Art",
+                                "History",
+                                "Geography",
+                                "Sociology",
+                                "Business",
+                                "Political Science",
+                                "Economics",
+                                "Philosophy",
+                                "Mathematics",
+                                "Engineering",
+                                "Environmental Science",
+                                "Agricultural and Food Sciences",
+                                "Education",
+                                "Law",
+                                "Linguistics"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "publicationDateOrYear",
+                        "in": "query",
+                        "description": "The publication date or year to filter the results by (inclusive). Accepts the format <startDate>:<endDate> (YYYY-MM-DD), e.g. 2016-03:2020-06 (as early as March, 2016 or as late as June, 2020).",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "publicationTypes",
+                        "in": "query",
+                        "description": "The publication types to filter the results by. These are comma-separated values, e.g. \"JournalArticle,CaseReport\".",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "Review",
+                                "JournalArticle",
+                                "CaseReport",
+                                "ClinicalTrial",
+                                "Dataset",
+                                "Editorial",
+                                "LettersAndComments",
+                                "MetaAnalysis",
+                                "News",
+                                "Study",
+                                "Book",
+                                "BookSection"
+                            ]
+                        }
+                    }
+                ],
+                "deprecated": false
+            }
+        }
+    },
+    "components": {
+        "schemas": {}
+    }
+}

@@ -1,0 +1,363 @@
+{
+    "info": {
+        "title": "StackExchange Search",
+        "description": "A GET-request based search operation for any of several StackExchange boards. This is useful as these boards contain vast amounts of useful information to both common and uncommon queries.",
+        "version": "v1.0.0"
+    },
+    "servers": [
+        {
+            "url": "https://api.stackexchange.com"
+        }
+    ],
+    "paths": {
+        "/2.3/search": {
+            "get": {
+                "description": "Search one of several StackExchange boards based on the provided parameters.",
+                "operationId": "searchStack",
+                "parameters": [
+                    {
+                        "name": "intitle",
+                        "in": "query",
+                        "description": "The query to use for searching.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "description": "How to sort the results returned for the query.",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "activity",
+                                "votes",
+                                "creation",
+                                "relevance"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "order",
+                        "in": "query",
+                        "description": "The order in which to sort the results.",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "asc",
+                                "desc"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "site",
+                        "in": "query",
+                        "description": "The StackExchange site to search.",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "stackoverflow",
+                                "serverfault",
+                                "superuser",
+                                "askubuntu",
+                                "unix",
+                                "cs",
+                                "softwareengineering",
+                                "codegolf",
+                                "codereview",
+                                "cstheory",
+                                "security",
+                                "cryptography",
+                                "reverseengineering",
+                                "datascience",
+                                "devops",
+                                "ux",
+                                "dba",
+                                "gis",
+                                "webmasters",
+                                "arduino",
+                                "raspberrypi",
+                                "networkengineering",
+                                "iot",
+                                "tor",
+                                "sqa",
+                                "mathoverflow",
+                                "math",
+                                "mathematica",
+                                "dsp",
+                                "gamedev",
+                                "robotics",
+                                "genai",
+                                "computergraphics"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "tagged",
+                        "in": "query",
+                        "description": "A semicolon-separated list of tags to search for.",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "nottagged",
+                        "in": "query",
+                        "description": "A semicolon-separated list of tags to exclude from the search.",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "accepted",
+                        "in": "query",
+                        "description": "Whether or not to search for only accepted answers.",
+                        "required": false,
+                        "schema": {
+                            "type": "boolean"
+                        }
+                    },
+                    {
+                        "name": "pagesize",
+                        "in": "query",
+                        "description": "The number of results to return per page.",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/2.3/questions/{id}/answers": {
+            "get": {
+                "description": "Bring up all answers for a given question ID.",
+                "operationId": "searchStackAnswers",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "The ID of the question to query.",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "site",
+                        "in": "query",
+                        "description": "The StackExchange site to query from.",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "stackoverflow",
+                                "serverfault",
+                                "superuser",
+                                "askubuntu",
+                                "unix",
+                                "cs",
+                                "softwareengineering",
+                                "codegolf",
+                                "codereview",
+                                "cstheory",
+                                "security",
+                                "cryptography",
+                                "reverseengineering",
+                                "datascience",
+                                "devops",
+                                "ux",
+                                "dba",
+                                "gis",
+                                "webmasters",
+                                "arduino",
+                                "raspberrypi",
+                                "networkengineering",
+                                "iot",
+                                "tor",
+                                "sqa",
+                                "mathoverflow",
+                                "math",
+                                "mathematica",
+                                "dsp",
+                                "gamedev",
+                                "robotics",
+                                "genai",
+                                "computergraphics"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "filter",
+                        "in": "query",
+                        "description": "This is required in order to actually get the body of the answer.",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "!nNPvSNdWme"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "order",
+                        "in": "query",
+                        "description": "The order in which to sort the results.",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "asc",
+                                "desc"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "description": "How to sort the results returned for the query.",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "activity",
+                                "votes",
+                                "creation"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "pagesize",
+                        "in": "query",
+                        "description": "The number of results to return per page.",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "The page number to return given the page size.",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "deprecated": false
+            }
+        },
+        "/2.3/answers/{ids}": {
+            "get": {
+                "description": "Bring up relevant data for one of more answers based on the provided IDs.",
+                "operationId": "getStackAnswers",
+                "parameters": [
+                    {
+                        "name": "ids",
+                        "in": "path",
+                        "description": "A semicolon-separated list of answer IDs to query.",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "order",
+                        "in": "query",
+                        "description": "The order in which to sort the results.",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "asc",
+                                "desc"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "sort",
+                        "in": "query",
+                        "description": "How to sort the results returned for the query.",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "activity",
+                                "votes",
+                                "creation"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "site",
+                        "in": "query",
+                        "description": "The StackExchange site to query from.",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "stackoverflow",
+                                "serverfault",
+                                "superuser",
+                                "askubuntu",
+                                "unix",
+                                "cs",
+                                "softwareengineering",
+                                "codegolf",
+                                "codereview",
+                                "cstheory",
+                                "security",
+                                "cryptography",
+                                "reverseengineering",
+                                "datascience",
+                                "devops",
+                                "ux",
+                                "dba",
+                                "gis",
+                                "webmasters",
+                                "arduino",
+                                "raspberrypi",
+                                "networkengineering",
+                                "iot",
+                                "tor",
+                                "sqa",
+                                "mathoverflow",
+                                "math",
+                                "mathematica",
+                                "dsp",
+                                "gamedev",
+                                "robotics",
+                                "genai",
+                                "computergraphics"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "filter",
+                        "in": "query",
+                        "description": "This is required in order to actually get the body of the answer.",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "enum": [
+                                "!nNPvSNdWme"
+                            ]
+                        }
+                    }
+                ],
+                "deprecated": false
+            }
+        }
+    },
+    "components": {
+        "schemas": {}
+    }
+}
