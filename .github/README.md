@@ -13,7 +13,7 @@
 <!-- Badges -->
 <h4 align="center">
     <a href="https://github.com/bapo2/gpt-actions/issues/new?assignees=&labels=new-schema&projects=&template=new_action_template.yml&title=%5BNew+GPT+Action%5D%3A+">
-        <img alt="Actions contributed" src="https://img.shields.io/badge/6%20actions%20contributed-ef571d?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIzNnB4IiBoZWlnaHQ9IjM2cHgiIHN0cm9rZS13aWR0aD0iMiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGNvbG9yPSIjZmZmZmZmIj48cGF0aCBkPSJNNiAxMkgxMk0xOCAxMkgxMk0xMiAxMlY2TTEyIDEyVjE4IiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L3BhdGg%2BPC9zdmc%2B">
+        <img alt="Actions contributed" src="https://img.shields.io/badge/7%20actions%20contributed-ef571d?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIzNnB4IiBoZWlnaHQ9IjM2cHgiIHN0cm9rZS13aWR0aD0iMiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGNvbG9yPSIjZmZmZmZmIj48cGF0aCBkPSJNNiAxMkgxMk0xOCAxMkgxMk0xMiAxMlY2TTEyIDEyVjE4IiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L3BhdGg%2BPC9zdmc%2B">
     </a>
     <a href="https://github.com/bapo2/gpt-actions/issues?q=is%3Aissue+is%3Aopen+label%3Aschema-valid+">
         <img alt="Schemas awaiting approval" src="https://img.shields.io/github/issues/bapo2/gpt-actions/schema-valid?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIzNnB4IiBoZWlnaHQ9IjM2cHgiIHN0cm9rZS13aWR0aD0iMiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGNvbG9yPSIjZmZmZmZmIj48cGF0aCBkPSJNMTMuNSA2TDEwIDE4LjUiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjwvcGF0aD48cGF0aCBkPSJNNi41IDguNUwzIDEyTDYuNSAxNS41IiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L3BhdGg%2BPHBhdGggZD0iTTE3LjUgOC41TDIxIDEyTDE3LjUgMTUuNSIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI%2BPC9wYXRoPjwvc3ZnPg%3D%3D&label=schemas%20awaiting%20approval&color=21bf1b">
@@ -298,7 +298,7 @@ https://raw.githubusercontent.com/bapo2/gpt-actions/main/schemas/github-file-lis
 <li><b>Authentication type:</b> API Key [Bearer]</li></ul></p>
 <p><b>Description:</b><br>
 
-This allows GPT to read a file from Github via its `raw.githubusercontent.com` URL. When pairs with the "Github File Lister" action, this is capable of allowing GPT to look through and read any repository accessible to it.
+This allows GPT to read a file from Github via its `raw.githubusercontent.com` URL. When paired with the "Github File Lister" action, this is capable of allowing GPT to look through and read any repository accessible to it.
 
 Providing an API key is optional when reading from public repos, but is required when reading from private ones. To create one for GPT to use, simply go to [the "developer settings" page](https://github.com/settings/tokens) and create a PAT with read-access to whatever you want GPT to be able to view.</p>
 <p><b>Import URL:</b><br>
@@ -374,6 +374,105 @@ https://raw.githubusercontent.com/bapo2/gpt-actions/main/schemas/github-file-rea
 ```
 </details></details></td></tr>
 <!-- END_SCHEMA: "Github File Reader" -->
+
+<!-- START_SCHEMA: "Klarna Product Search" -->
+<tr></tr><tr><td><details><summary><b>Klarna Product Search</b> - <i>Find products that match your query</i></summary><p><ul>
+<li><b>Author:</b> <a href="https://github.com/sanzgiri">sanzgiri</a></li>
+<li><b>Schema format:</b> YAML</li>
+<li><b>Authentication type:</b> No authentication</li></ul></p>
+<p><b>Description:</b><br>
+
+This is an action for Klarna Product Search. Its primary function is to assist users in finding products that match their queries. It can search for a wide range of products based on specific user requests, including details like product type, brand, price range, and more. Additionally, it has the capability to generate images of these products using DALL-E, providing a visual representation of the items you're interested in. </p>
+<p><b>Import URL:</b><br>
+
+```
+https://raw.githubusercontent.com/bapo2/gpt-actions/main/schemas/klarna-product-search/schema.yaml
+```
+</p><details><summary><b>Schema</b></summary>
+
+```yaml
+openapi: 3.0.1
+servers:
+  - url: https://www.klarna.com/us/shopping
+info:
+  title: Open AI Klarna product Api
+  version: v0
+  x-apisguru-categories:
+    - ecommerce
+  x-logo:
+    url: https://www.klarna.com/static/img/social-prod-imagery-blinds-beauty-default.jpg
+  x-origin:
+    - format: openapi
+      url: https://www.klarna.com/us/shopping/public/openai/v0/api-docs/
+      version: "3.0"
+  x-providerName: klarna.com
+  x-serviceName: openai
+tags:
+  - description: Open AI Product Endpoint. Query for products.
+    name: open-ai-product-endpoint
+paths:
+  /public/openai/v0/products:
+    get:
+      deprecated: false
+      operationId: productsUsingGET
+      parameters:
+        - description: A precise query that matches one very small category or product that needs to be searched for to find the products the user is looking for. If the user explicitly stated what they want, use that as a query. The query is as specific as possible to the product name or category mentioned by the user in its singular form, and don't contain any clarifiers like latest, newest, cheapest, budget, premium, expensive or similar. The query is always taken from the latest topic, if there is a new topic a new query is started.
+          in: query
+          name: q
+          required: true
+          schema:
+            type: string
+        - description: number of products returned
+          in: query
+          name: size
+          required: false
+          schema:
+            type: integer
+        - description: maximum price of the matching product in local currency, filters results
+          in: query
+          name: budget
+          required: false
+          schema:
+            type: integer
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProductResponse"
+          description: Products found
+        "503":
+          description: one or more services are unavailable
+      summary: API for fetching Klarna product information
+      tags:
+        - open-ai-product-endpoint
+components:
+  schemas:
+    Product:
+      properties:
+        attributes:
+          items:
+            type: string
+          type: array
+        name:
+          type: string
+        price:
+          type: string
+        url:
+          type: string
+      title: Product
+      type: object
+    ProductResponse:
+      properties:
+        products:
+          items:
+            $ref: "#/components/schemas/Product"
+          type: array
+      title: ProductResponse
+      type: object
+```
+</details></details></td></tr>
+<!-- END_SCHEMA: "Klarna Product Search" -->
 
 <!-- START_SCHEMA: "Semantic Scholar Search" -->
 <tr></tr><tr><td><details><summary><b>Semantic Scholar Search</b> - <i>A GET-request based search operation for papers on Semantic Scholar.</i></summary><p><ul>
