@@ -1,0 +1,24 @@
+name: Report a Problem with a Schema
+description: Report a problem with a schema in the repo which will be reviewed by a maintainer.
+title: "[Schema Problem]: "
+labels: [schema-problem]
+body:
+  - type: markdown
+    attributes:
+      value: "👋 Hi there! **Please fill out the fields bellow** to report a problem with a schema in the repo. This will be reviewed by a maintainer and we'll do our best to fix it as soon as possible."
+  - type: input
+    id: name
+    attributes:
+      label: "📂 Name"
+      description: "The name of the action in question as it appears in the repo."
+      placeholder: "Name here..."
+    validations:
+      required: true
+  - type: textarea
+    id: desc
+    attributes:
+      label: "⚠ Problem Description"
+      description: "A description of the problem you're having with the schema **in detail.** Please include any relevant screenshots, error messages, etc."
+      placeholder: "Description here..."
+    validations:
+      required: true
