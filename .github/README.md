@@ -13,7 +13,7 @@
 <!-- Badges -->
 <h4 align="center">
     <a href="https://github.com/bapo2/gpt-actions/issues/new?assignees=&labels=new-schema&projects=&template=new_action_template.yml&title=%5BNew+GPT+Action%5D%3A+">
-        <img alt="Actions contributed" src="https://img.shields.io/badge/7%20actions%20contributed-ef571d?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIzNnB4IiBoZWlnaHQ9IjM2cHgiIHN0cm9rZS13aWR0aD0iMiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGNvbG9yPSIjZmZmZmZmIj48cGF0aCBkPSJNNiAxMkgxMk0xOCAxMkgxMk0xMiAxMlY2TTEyIDEyVjE4IiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L3BhdGg%2BPC9zdmc%2B">
+        <img alt="Actions contributed" src="https://img.shields.io/badge/8%20actions%20contributed-ef571d?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIzNnB4IiBoZWlnaHQ9IjM2cHgiIHN0cm9rZS13aWR0aD0iMiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGNvbG9yPSIjZmZmZmZmIj48cGF0aCBkPSJNNiAxMkgxMk0xOCAxMkgxMk0xMiAxMlY2TTEyIDEyVjE4IiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L3BhdGg%2BPC9zdmc%2B">
     </a>
     <a href="https://github.com/bapo2/gpt-actions/issues?q=is%3Aissue+is%3Aopen+label%3Aschema-valid+">
         <img alt="Schemas awaiting approval" src="https://img.shields.io/github/issues/bapo2/gpt-actions/schema-valid?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIzNnB4IiBoZWlnaHQ9IjM2cHgiIHN0cm9rZS13aWR0aD0iMiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGNvbG9yPSIjZmZmZmZmIj48cGF0aCBkPSJNMTMuNSA2TDEwIDE4LjUiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjwvcGF0aD48cGF0aCBkPSJNNi41IDguNUwzIDEyTDYuNSAxNS41IiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L3BhdGg%2BPHBhdGggZD0iTTE3LjUgOC41TDIxIDEyTDE3LjUgMTUuNSIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI%2BPC9wYXRoPjwvc3ZnPg%3D%3D&label=schemas%20awaiting%20approval&color=21bf1b">
@@ -52,6 +52,114 @@
 <thead><tr><th width="9999px"><h2 align="center">📁 Action Directory</h2></th></tr></thead>
 <tbody><tr></tr>
 <!-- START_SCHEMA_DIRECTORY -->
+<!-- START_SCHEMA: "APIs.guru Search" -->
+<tr></tr><tr><td><details><summary><b>APIs.guru Search</b> - <i>Uses the APIs.guru web service to gather information on publicly-accessible APIs and their providers.</i></summary><p><ul>
+<li><b>Author:</b> <a href="https://github.com/bapo2">bapo2</a></li>
+<li><b>Schema format:</b> JSON</li>
+<li><b>Authentication type:</b> No authentication</li></ul></p>
+<p><b>Description:</b><br>
+
+Because @elmstedt mentioned on the forums that those looking to create API actions should use [apis.guru](https://apis.guru/) (among other resources) for reference in creating schemas, I've decided to write an action that should make this easier by allowing GPT to look for information from this web service all on its own.
+
+This isn't perfect, as some API specs can be quite long and will thus give the `ResponseTooLargeError`, however I have tried to compensate for this by instructing the model to return a link to the appropriate API docs in the event that it cannot parse the spec directly from the site.</p>
+<p><b>Import URL:</b><br>
+
+```
+https://raw.githubusercontent.com/bapo2/gpt-actions/main/schemas/apisguru-search/schema.json
+```
+</p><details><summary><b>Schema</b></summary>
+
+```json
+{
+    "info": {
+      "title": "APIs.guru Search",
+      "description": "Allows various queries to the apis.guru web service, which enables searching through information on various publically accessible APIs for a wide variety of different use-cases.",
+      "version": "v1.0.0"
+    },
+    "servers": [
+      {
+        "url": "https://api.apis.guru/v2"
+      }
+    ],
+    "paths": {
+      "/providers.json": {
+        "get": {
+          "description": "Lists all the providers that are available in the apis.guru database.",
+          "operationId": "listProviders",
+          "deprecated": false
+        }
+      },
+      "/{provider}.json": {
+        "get": {
+          "description": "Lists all the APIs for a given provider (typically based on the results of the 'listProviders' operation).",
+          "operationId": "listProviderAPIs",
+          "parameters": [
+            {
+              "name": "provider",
+              "in": "path",
+              "description": "The provider string to list the APIs for.",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "deprecated": false
+        }
+      },
+      "/specs/{provider}/{api}/{version}/openapi.json": {
+        "get": {
+          "description": "Returns the OpenAPI specification for a given API from a given provider (look in the 'swaggerUrl' field of the 'listProviderAPIs' operation for the parameters to use here, which are the last 3 respectively before 'openapi.json').",
+          "operationId": "getAPI",
+          "parameters": [
+            {
+              "name": "provider",
+              "in": "path",
+              "description": "The provider string to list the APIs for (e.g. 'github.com').",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "api",
+              "in": "path",
+              "description": "The API string to get the specification for (e.g. 'api.github.com').",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+                "name": "version",
+                "in": "path",
+                "description": "The version string to get the specification for (e.g. '1.1.4').",
+                "required": true,
+                "schema": {
+                  "type": "string"
+                }
+            }
+          ],
+          "deprecated": false
+        }
+      }
+    },
+    "responses": {
+        "200": {
+            "description": "Successful, continue as normal."
+        },
+        "ResponseTooLargeError": {
+            "description": "If the output is too long to retrieve, inform the user that this is a technical limitation of your system, then attempt to instead give the user a link to the API docs, which can likely be found in previously retrieved data."
+        }
+    },
+    "components": {
+      "schemas": {}
+    }
+}
+```
+</details></details></td></tr>
+<!-- END_SCHEMA: "APIs.guru Search" -->
+
 <!-- START_SCHEMA: "ArXiv Search" -->
 <tr></tr><tr><td><details><summary><b>ArXiv Search</b> - <i>A GET-request based search operation for searching through arXiv.</i></summary><p><ul>
 <li><b>Author:</b> <a href="https://github.com/bapo2">bapo2</a></li>

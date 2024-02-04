@@ -1,0 +1,86 @@
+{
+    "info": {
+      "title": "APIs.guru Search",
+      "description": "Allows various queries to the apis.guru web service, which enables searching through information on various publically accessible APIs for a wide variety of different use-cases.",
+      "version": "v1.0.0"
+    },
+    "servers": [
+      {
+        "url": "https://api.apis.guru/v2"
+      }
+    ],
+    "paths": {
+      "/providers.json": {
+        "get": {
+          "description": "Lists all the providers that are available in the apis.guru database.",
+          "operationId": "listProviders",
+          "deprecated": false
+        }
+      },
+      "/{provider}.json": {
+        "get": {
+          "description": "Lists all the APIs for a given provider (typically based on the results of the 'listProviders' operation).",
+          "operationId": "listProviderAPIs",
+          "parameters": [
+            {
+              "name": "provider",
+              "in": "path",
+              "description": "The provider string to list the APIs for.",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "deprecated": false
+        }
+      },
+      "/specs/{provider}/{api}/{version}/openapi.json": {
+        "get": {
+          "description": "Returns the OpenAPI specification for a given API from a given provider (look in the 'swaggerUrl' field of the 'listProviderAPIs' operation for the parameters to use here, which are the last 3 respectively before 'openapi.json').",
+          "operationId": "getAPI",
+          "parameters": [
+            {
+              "name": "provider",
+              "in": "path",
+              "description": "The provider string to list the APIs for (e.g. 'github.com').",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "api",
+              "in": "path",
+              "description": "The API string to get the specification for (e.g. 'api.github.com').",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+                "name": "version",
+                "in": "path",
+                "description": "The version string to get the specification for (e.g. '1.1.4').",
+                "required": true,
+                "schema": {
+                  "type": "string"
+                }
+            }
+          ],
+          "deprecated": false
+        }
+      }
+    },
+    "responses": {
+        "200": {
+            "description": "Successful, continue as normal."
+        },
+        "ResponseTooLargeError": {
+            "description": "If the output is too long to retrieve, inform the user that this is a technical limitation of your system, then attempt to instead give the user a link to the API docs, which can likely be found in previously retrieved data."
+        }
+    },
+    "components": {
+      "schemas": {}
+    }
+}
