@@ -53,13 +53,13 @@
 <tbody><tr></tr>
 <!-- START_SCHEMA_DIRECTORY -->
 <!-- START_SCHEMA: "APIs.guru Search" -->
-<tr></tr><tr><td><details><summary><b>APIs.guru Search</b> - <i>Uses the APIs.guru web service to gather information on publicly-accessible APIs and their providers.</i></summary><p><ul>
+<tr></tr><tr><td><details><summary><b>APIs.guru Search</b> - <i>Uses the APIs.guru web service to gather information on publicly-accessible APIs.</i></summary><p><ul>
 <li><b>Author:</b> <a href="https://github.com/bapo2">bapo2</a></li>
 <li><b>Schema format:</b> JSON</li>
 <li><b>Authentication type:</b> No authentication</li></ul></p>
 <p><b>Description:</b><br>
 
-Because @elmstedt mentioned on the forums that those looking to create API actions should use [apis.guru](https://apis.guru/) (among other resources) for reference in creating schemas, I've decided to write an action that should make this easier by allowing GPT to look for information from this web service all on its own.
+Because [@elmstedt](https://github.com/elmstedt) mentioned on the forums that those looking to create API actions should use [apis.guru](https://apis.guru/) (among other resources) for reference in creating schemas, I've decided to write an action that should make this easier by allowing GPT to look for information from this web service all on its own.
 
 This isn't perfect, as some API specs can be quite long and will thus give the `ResponseTooLargeError`, however I have tried to compensate for this by instructing the model to return a link to the appropriate API docs in the event that it cannot parse the spec directly from the site.</p>
 <p><b>Import URL:</b><br>
