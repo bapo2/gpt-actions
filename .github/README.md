@@ -1153,7 +1153,7 @@ To use an action from this repository, simply copy the import URL of the action 
 
 This will be updated as new features are added to the repository.
 
-- [ ] Add issue templates for feature requests, reports of invalid schemas, and other presumably common issues.
+- [x] Add issue templates for feature requests, reports of invalid schemas, and other presumably common issues.
 - [ ] Add a workflow to allow authors to update existing schemas similar to submitting a new ones.
 - [ ] Have the PR workflow run on a schedule rather than on workflow dispatch.
 - [ ] Add a more elegant means of removing obsolete schemas from the repository.

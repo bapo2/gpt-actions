@@ -1,0 +1,16 @@
+name: Other
+description: An issue template for everything not covered by the existing templates.
+title: "[General Issue]: <short description here>"
+labels: [general-issue]
+body:
+  - type: markdown
+    attributes:
+      value: "👋 Hi there! Thanks for taking the time to submit this issue! Please describe the problem you're having in detail bellow."
+  - type: textarea
+    id: schema
+    attributes:
+      label: "📝 Issue Description"
+      description: "A detailed description of the issue. Include any relevant information, such as errors, steps to reproduce, and expected behavior."
+      placeholder: "Issue description here..."
+    validations:
+      required: true
