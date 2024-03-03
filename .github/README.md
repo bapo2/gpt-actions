@@ -1105,8 +1105,8 @@ https://raw.githubusercontent.com/bapo2/gpt-actions/main/schemas/stackexchange-s
 </details></details></td></tr>
 <!-- END_SCHEMA: "StackExchange Search" -->
 
-<!-- START_SCHEMA: "Web Requests" -->
-<tr></tr><tr><td><details><summary><b>Web Requests</b> - <i>A versatile plugin enabling your LLM to browse the web, build apps & games with just chat & the use of no-code playgrounds, and much more!</i></summary><p><ul>
+<!-- START_SCHEMA: "WeGPT API" -->
+<tr></tr><tr><td><details><summary><b>WeGPT API</b> - <i>A versatile plugin that lets GPT browse, run JavaScript, query Etherscan, and much more!</i></summary><p><ul>
 <li><b>Author:</b> <a href="https://github.com/RealJD2020">RealJD2020</a></li>
 <li><b>Schema format:</b> JSON</li>
 <li><b>Authentication type:</b> No authentication</li></ul></p>
@@ -1116,7 +1116,7 @@ The full spec for what these set of actions are capable of (it’s extensive) ca
 <p><b>Import URL:</b><br>
 
 ```
-https://raw.githubusercontent.com/bapo2/gpt-actions/main/schemas/web-requests/schema.json
+https://raw.githubusercontent.com/bapo2/gpt-actions/main/schemas/we-gpt-api/schema.json
 ```
 </p><details><summary><b>Schema</b></summary>
 
@@ -1124,14 +1124,14 @@ https://raw.githubusercontent.com/bapo2/gpt-actions/main/schemas/web-requests/sc
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "Web Requests",
+    "title": "WeGPT API",
     "version": "1.1.8",
     "description": "A versatile plugin for browsing the web, building apps & games with just chat, and much more!"
   },
   "servers": [
     {
       "url": "https://plugin.wegpt.ai",
-      "description": "Web Requests API"
+      "description": "WeGPT API"
     }
   ],
   "paths": {
@@ -2179,7 +2179,7 @@ https://raw.githubusercontent.com/bapo2/gpt-actions/main/schemas/web-requests/sc
 }
 ```
 </details></details></td></tr>
-<!-- END_SCHEMA: "Web Requests" -->
+<!-- END_SCHEMA: "WeGPT API" -->
 <!-- END_SCHEMA_DIRECTORY -->
 </tbody>
 </table>

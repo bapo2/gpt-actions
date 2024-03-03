@@ -1,14 +1,14 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "Web Requests",
+    "title": "WeGPT API",
     "version": "1.1.8",
     "description": "A versatile plugin for browsing the web, building apps & games with just chat, and much more!"
   },
   "servers": [
     {
       "url": "https://plugin.wegpt.ai",
-      "description": "Web Requests API"
+      "description": "WeGPT API"
     }
   ],
   "paths": {
