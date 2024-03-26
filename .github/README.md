@@ -13,7 +13,7 @@
 <!-- Badges -->
 <h4 align="center">
     <a href="https://github.com/bapo2/gpt-actions/issues/new?assignees=&labels=new-schema&projects=&template=new_action_template.yml&title=%5BNew+GPT+Action%5D%3A+">
-        <img alt="Actions contributed" src="https://img.shields.io/badge/9%20actions%20contributed-ef571d?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIzNnB4IiBoZWlnaHQ9IjM2cHgiIHN0cm9rZS13aWR0aD0iMiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGNvbG9yPSIjZmZmZmZmIj48cGF0aCBkPSJNNiAxMkgxMk0xOCAxMkgxMk0xMiAxMlY2TTEyIDEyVjE4IiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L3BhdGg%2BPC9zdmc%2B">
+        <img alt="Actions contributed" src="https://img.shields.io/badge/10%20actions%20contributed-ef571d?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIzNnB4IiBoZWlnaHQ9IjM2cHgiIHN0cm9rZS13aWR0aD0iMiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGNvbG9yPSIjZmZmZmZmIj48cGF0aCBkPSJNNiAxMkgxMk0xOCAxMkgxMk0xMiAxMlY2TTEyIDEyVjE4IiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L3BhdGg%2BPC9zdmc%2B">
     </a>
     <a href="https://github.com/bapo2/gpt-actions/issues?q=is%3Aissue+is%3Aopen+label%3Aschema-valid+">
         <img alt="Schemas awaiting approval" src="https://img.shields.io/github/issues/bapo2/gpt-actions/schema-valid?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIzNnB4IiBoZWlnaHQ9IjM2cHgiIHN0cm9rZS13aWR0aD0iMiIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGNvbG9yPSIjZmZmZmZmIj48cGF0aCBkPSJNMTMuNSA2TDEwIDE4LjUiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjwvcGF0aD48cGF0aCBkPSJNNi41IDguNUwzIDEyTDYuNSAxNS41IiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj48L3BhdGg%2BPHBhdGggZD0iTTE3LjUgOC41TDIxIDEyTDE3LjUgMTUuNSIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI%2BPC9wYXRoPjwvc3ZnPg%3D%3D&label=schemas%20awaiting%20approval&color=21bf1b">
@@ -482,6 +482,71 @@ https://raw.githubusercontent.com/bapo2/gpt-actions/main/schemas/github-file-rea
 ```
 </details></details></td></tr>
 <!-- END_SCHEMA: "Github File Reader" -->
+
+<!-- START_SCHEMA: "HintLoop Analytics" -->
+<tr></tr><tr><td><details><summary><b>HintLoop Analytics</b> - <i>Track usage statistics and popular request topics for your GPTs</i></summary><p><ul>
+<li><b>Author:</b> <a href="https://github.com/KirillDemochkin">KirillDemochkin</a></li>
+<li><b>Schema format:</b> YAML</li>
+<li><b>Authentication type:</b> API Key [Bearer]</li></ul></p>
+<p><b>Description:</b><br>
+
+This is a free action that allows the user to track product analytics for their GPTs.
+To get started the user needs to create a free account at https://hintloop.com/analytics.
+
+hintloop analytics can track DAU, the number of messages, the number of chats, the rating history, popular conversation topics, and more for free.
+
+Authentication guide: https://hintloop.com/learn/docs/intro
+
+You also need to add this to your system prompt:
+
+> First, you must ALWAYS call send_analytics at the beginning of the conversation with the topic parameter and again before EVERY reply. The topic parameter must contain keywords (1 to 3 nouns, adjectives, adverbs) describing the most recent message by the user. The keywords must capture the topic of the user's message and your response to it. The keywords must be descriptive and include only the most relevant information from the input and from your response. You absolutely must not include any personal information such as names, addresses, documents, phone numbers, emails, etc in the summary.
+
+https://github.com/bapo2/gpt-actions/assets/13347576/b4f8e59b-15cb-4bed-8fb4-f28e5077e9ae
+</p>
+<p><b>Import URL:</b><br>
+
+```
+https://raw.githubusercontent.com/bapo2/gpt-actions/main/schemas/hintloop-analytics/schema.yaml
+```
+</p><details><summary><b>Schema</b></summary>
+
+```yaml
+openapi: 3.0.1
+info:
+  title: Analytics to improve this assistant
+  description: Send analytics to the developer of this assistant to improve it.
+  version: v1
+servers:
+  - url: https://api.hintloop.com
+paths:
+  /plugin/v2/stats_topic:
+    post:
+      operationId: send_analytics
+      x-openai-isConsequential: false
+      summary: This is an important function that must be called at the beginning of the conversation and before every reply.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TopicRequest"
+      responses:
+        "204":
+          description: OK
+components:
+  schemas:
+    TopicRequest:
+      type: object
+      required:
+        - topic
+      properties:
+        topic:
+          description: Keywords (3 to 7 nouns, adjectives, adverbs) describing the most recent message by the user and your
+            response to it.
+          type: string
+```
+</details></details></td></tr>
+<!-- END_SCHEMA: "HintLoop Analytics" -->
 
 <!-- START_SCHEMA: "Klarna Product Search" -->
 <tr></tr><tr><td><details><summary><b>Klarna Product Search</b> - <i>Find products that match your query</i></summary><p><ul>
@@ -1116,7 +1181,7 @@ The full spec for what these set of actions are capable of (it’s extensive) ca
 <p><b>Import URL:</b><br>
 
 ```
-https://raw.githubusercontent.com/bapo2/gpt-actions/main/schemas/we-gpt-api/schema.json
+https://raw.githubusercontent.com/bapo2/gpt-actions/main/schemas/web-requests/schema.json
 ```
 </p><details><summary><b>Schema</b></summary>
 
