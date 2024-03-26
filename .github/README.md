@@ -41,8 +41,6 @@
         <a href="#-how-to-use">How to Use</a>
         &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
         <a href="#-contributing">Contributing</a>
-        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-        <a href="#-todo">TODO</a>
     </b>
 </p>
 <br>
@@ -2288,13 +2286,3 @@ To use an action from this repository, simply copy the import URL of the action 
 1. **[Fork the repository.](https://github.com/bapo2/gpt-actions/fork)** This will create a copy of the repository under your own account, which you can then make changes to. You only need to copy the default branch, `main`.
 2. **Make the changes you'd like to contribute.** This can be done either directly on GitHub or by cloning the repository to your local machine and making the changes there.
 3. **[Submit a pull request.](https://github.com/bapo2/gpt-actions/compare)** This will open a new PR, which will be reviewed by a repository maintainer. If the changes are approved, they will be merged into the repository at an appropriate time as not to conflict with automated workflows.
-
-<!-- TODO -->
-## 📝 TODO
-
-This will be updated as new features are added to the repository.
-
-- [x] Add issue templates for feature requests, reports of invalid schemas, and other presumably common issues.
-- [ ] Add a workflow to allow authors to update existing schemas similar to submitting a new ones.
-- [ ] Have the PR workflow run on a schedule rather than on workflow dispatch.
-- [ ] Add a more elegant means of removing obsolete schemas from the repository.
